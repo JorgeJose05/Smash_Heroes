@@ -5,6 +5,8 @@ import Carrusel from "./Componentes/Carrusel";
 import Campeones from "./Componentes/Campeones";
 import Campeon from "./Componentes/Campeon";
 import Contactanos from "./Componentes/Contactanos";
+import Miembros from "./Componentes/Miembros";
+import Foro from "./Componentes/Foro";
 
 export default function App() {
   //hacer una funcion que se le pase un numero y segun el numero que se le ponga el estado que sea al componente que este en el main
@@ -27,6 +29,10 @@ export default function App() {
         return <Campeon campeonActual={campeonActual} />;
       case "Contactanos":
         return <Contactanos />;
+      case "Miembros":
+        return <Miembros />;
+      case "Foro":
+        return <Foro />;
       default:
         return null;
     }
