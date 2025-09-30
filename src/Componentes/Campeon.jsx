@@ -2,17 +2,17 @@ import "../styles/campeon.css";
 
 export default function Campeon({ campeonActual }) {
   return (
-    <div class="personaje-container" id="personaje-detalle">
-      <div class="personaje-info">
+    <div className="personaje-container" id="personaje-detalle">
+      <div className="personaje-info">
         <h1>{campeonActual.nombre}</h1>
-        <div class="personaje-avatar">
+        <div className="personaje-avatar">
           <img src={campeonActual.imagen} alt={campeonActual.nombre} />
         </div>
-        <div class="personaje-habilidades">
+        <div className="personaje-habilidades">
           <h1>Habilidades</h1>
           <ul>
-            {campeonActual.habilidades.map((h) => (
-              <li>
+            {campeonActual.habilidades.map((h, index) => (
+              <li key={index}>
                 <img src={h.icono} alt={h.nombre} />
                 <span>{h.nombre}</span>
               </li>
@@ -20,7 +20,7 @@ export default function Campeon({ campeonActual }) {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="historia">
         <h2>Historia</h2>
         <p>{campeonActual.historia}</p>
       </div>

@@ -1,3 +1,12 @@
+:root {
+  --amarillo: #d6d58e; /*o usa este dbf227*/
+  --azul: #042940;
+  --verdeAction: #9fc131;
+  --hoververdeAction: #dbf227;
+  --boxesback: #005c53;
+  --detalles: #dbf227;
+}
+
 .personaje-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -16,6 +25,14 @@
 
 .personaje-info h1 {
   text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.personaje-habilidades h1 {
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
 }
 
 .personaje-habilidades ul {
@@ -43,6 +60,7 @@
 .personaje-habilidades span {
   font-size: 0.9rem;
   font-weight: bold;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 .personaje-avatar {
@@ -50,7 +68,7 @@
   height: 180px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #ffab07; /* color de borde */
+  border: 8px solid var(--boxesback); /* color de borde */
   display: flex;
   justify-content: center;
   align-items: flex-start; /* importante: recorta desde arriba (cabeza) */
@@ -62,4 +80,13 @@
   height: auto;
   position: relative;
   top: 10px; /* ajusta cuánto bajas la imagen para centrar la cabeza */
+}
+
+.historia h2 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.historia p {
+  font-family: "Roboto", Helvetica, sans-serif;
 }

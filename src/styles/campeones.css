@@ -24,29 +24,18 @@
 
 /* Botones de clases (hereda de .top-menu-button que ya tienes) */
 .container-champion-clases .top-menu-button {
-  background-color: #4caf50;
-  color: #fff;
+  background-color: var(--verdeAction);
+  color: #000;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .container-champion-clases .top-menu-button:hover {
-  background-color: #7fff00;
-  color: #000;
-  box-shadow: 0 0 8px #7fff00;
+  background-color: var(--verdeAction);
+  color: #fff;
+  box-shadow: 0 0 8px var(--detalles);
   transform: scale(1.05);
-}
-
-/* Botón especial (puede ser "Luchadores") */
-.container-champion-clases .loggin-button {
-  background-color: #2196f3; /* azul eléctrico */
-}
-
-.container-champion-clases .loggin-button:hover {
-  background-color: #00bfff;
-  color: #000;
-  box-shadow: 0 0 10px #00bfff;
 }
 
 /* ====== Sección Campeones ====== */
@@ -58,18 +47,17 @@
 }
 
 .campeones-section h1 {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-transform: uppercase;
-  font-size: 2.2rem;
-  color: #7fff00; /* verde gamer */
-  text-shadow: 2px 2px #000;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 1px 1px #fff;
   margin-bottom: 0.5rem;
 }
 
 /* Línea separadora personalizada */
 .campeones-section hr {
   border: none;
-  border-top: 3px solid #4caf50;
+  border-top: 3px solid var(--azul);
   width: 80px;
   margin: 0.5rem auto 2rem;
 }
@@ -91,7 +79,7 @@
 }
 
 .campeones-container li {
-  background-color: #3a3a3a;
+  background-color: var(--boxesback);
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
@@ -101,21 +89,24 @@
 
 .campeones-container li:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 12px #7fff00;
+  box-shadow: 0 0 12px var(--detalles);
 }
 
 /* Texto dentro de campeones */
 .campeones-container li h2 {
   font-size: 1.2rem;
   color: #fff;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 400;
   margin: 0.5rem 0;
 }
 .campeones-container li p {
   font-size: 0.9rem;
+  font-family: "Poppins", Arial, sans-serif;
   color: #dcdcdc;
 }
 .top-menu-button.selected {
-  background-color: #7fff00; /* verde brillante */
+  background-color: var(--verdeAction);
   color: #000;
-  box-shadow: 0 0 10px #7fff00;
+  box-shadow: 0 0 10px var(--detalles);
 }
