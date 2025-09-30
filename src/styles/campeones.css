@@ -1,4 +1,14 @@
 /* ====== Filtros de clases ====== */
+
+:root {
+  --amarillo: #d6d58e; /*o usa este dbf227*/
+  --azul: #042940;
+  --verdeAction: #9fc131;
+  --hoververdeAction: #dbf227;
+  --boxesback: #005c53;
+  --detalles: #dbf227;
+}
+
 .container-champion-clases {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +16,7 @@
   gap: 0.8rem;
   margin: 2rem auto;
   padding: 1rem;
-  background-color: #2e2e2e; /* bloque oscuro gamer */
+  background-color: var(--boxesback); /* bloque oscuro gamer */
   border-radius: 12px;
   max-width: 1000px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);

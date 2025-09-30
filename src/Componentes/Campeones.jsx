@@ -1,9 +1,15 @@
 import { useState } from "react";
 import "../styles/campeones.css";
 import shanumi from "../styles/imgs/Personajes/shanumi.avif";
+import Materiales from "../styles/imgs/Personajes/materiales.avif";
+import Sadic from "../styles/imgs/Personajes/SADic.avif";
 import venom from "../styles/imgs/Personajes/venom.avif";
 import Aka from "../styles/imgs/Personajes/Aka.avif";
 import Ao from "../styles/imgs/Personajes/Ao.avif";
+import Alice from "../styles/imgs/Personajes/alice.avif";
+import Azazel from "../styles/imgs/Personajes/azazel.avif";
+import Titiritero from "../styles/imgs/Personajes/titiritero.avif";
+import Mesheti from "../styles/imgs/Personajes/Mesheti.avif";
 import Cryomancer from "../styles/imgs/Personajes/Cryomancer.avif";
 import Yorm from "../styles/imgs/Personajes/Yorm.avif";
 import Kogane from "../styles/imgs/Personajes/Kogane.avif";
@@ -73,7 +79,7 @@ Pero en el momento de la matanza, se dió cuenta que la venganza que había logr
     ],
   },
   {
-    imagen: shanumi,
+    imagen: Materiales,
     nombre: "Materialist",
     tipo: "Luchadora",
     dificultad: "Baja",
@@ -143,7 +149,7 @@ Pero en el momento de la matanza, se dió cuenta que la venganza que había logr
     ],
   },
   {
-    imagen: venom,
+    imagen: Sadic,
     nombre: "SADic",
     tipo: "Asesino",
     dificultad: "Media-Alta",
@@ -180,7 +186,7 @@ Pero en el momento de la matanza, se dió cuenta que la venganza que había logr
     ],
   },
   {
-    imagen: venom,
+    imagen: Mesheti,
     nombre: "Meseti",
     tipo: "Luchador",
     dificultad: "Baja",
@@ -219,7 +225,7 @@ Pero en el momento de la matanza, se dió cuenta que la venganza que había logr
     ],
   },
   {
-    imagen: venom,
+    imagen: Titiritero,
     nombre: "El titiritero", //otero otero ti ti ti
     tipo: "Mago",
     dificultad: "Alta",
@@ -264,7 +270,7 @@ Pero en el momento de la matanza, se dió cuenta que la venganza que había logr
     ],
   },
   {
-    imagen: venom,
+    imagen: Azazel,
     nombre: "Azazel",
     tipo: "Luchador",
     dificultad: "Baja",
@@ -293,7 +299,7 @@ Pero en el momento de la matanza, se dió cuenta que la venganza que había logr
     ],
   },
   {
-    imagen: venom,
+    imagen: Alice,
     nombre: "Alice",
     tipo: "Asesina Luchadora Tiradora",
     dificultad: "Media",
