@@ -1,0 +1,112 @@
+/* ====== Filtros de clases ====== */
+
+:root {
+  --amarillo: #d6d58e; /*o usa este dbf227*/
+  --azul: #042940;
+  --verdeAction: #9fc131;
+  --hoververdeAction: #dbf227;
+  --boxesback: #005c53;
+  --detalles: #dbf227;
+}
+
+.container-champion-clases {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--boxesback); /* bloque oscuro gamer */
+  border-radius: 12px;
+  max-width: 1000px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Botones de clases (hereda de .top-menu-button que ya tienes) */
+.container-champion-clases .top-menu-button {
+  background-color: var(--verdeAction);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.container-champion-clases .top-menu-button:hover {
+  background-color: var(--verdeAction);
+  color: #fff;
+  box-shadow: 0 0 8px var(--detalles);
+  transform: scale(1.05);
+}
+
+/* ====== Sección Campeones ====== */
+.campeones-section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.campeones-section h1 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 1px 1px #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* Línea separadora personalizada */
+.campeones-section hr {
+  border: none;
+  border-top: 3px solid var(--azul);
+  width: 80px;
+  margin: 0.5rem auto 2rem;
+}
+
+/* ====== Contenedor de campeones ====== */
+.campeones-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Ejemplo para cada campeón (cuando agregues <li>) */
+.campeones-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: contents; /* deja que los <li> se comporten como grid-items */
+}
+
+.campeones-container li {
+  background-color: var(--boxesback);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.campeones-container li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px var(--detalles);
+}
+
+/* Texto dentro de campeones */
+.campeones-container li h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+.campeones-container li p {
+  font-size: 0.9rem;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #dcdcdc;
+}
+.top-menu-button.selected {
+  background-color: var(--verdeAction);
+  color: #000;
+  box-shadow: 0 0 10px var(--detalles);
+}

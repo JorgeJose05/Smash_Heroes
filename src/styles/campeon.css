@@ -1,0 +1,92 @@
+:root {
+  --amarillo: #d6d58e; /*o usa este dbf227*/
+  --azul: #042940;
+  --verdeAction: #9fc131;
+  --hoververdeAction: #dbf227;
+  --boxesback: #005c53;
+  --detalles: #dbf227;
+}
+
+.personaje-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1400px;
+}
+
+.personaje-info img {
+  display: block;
+  margin-top: 1rem;
+}
+
+.personaje-info h1 {
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.personaje-habilidades h1 {
+  text-align: center;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.personaje-habilidades ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.personaje-habilidades li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.personaje-habilidades img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.5rem;
+}
+
+.personaje-habilidades span {
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.personaje-avatar {
+  width: 180px; /* diámetro del círculo */
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid var(--boxesback); /* color de borde */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* importante: recorta desde arriba (cabeza) */
+  margin: 1rem auto;
+}
+
+.personaje-avatar img {
+  width: auto; /* mantiene el tamaño original */
+  height: auto;
+  position: relative;
+  top: 10px; /* ajusta cuánto bajas la imagen para centrar la cabeza */
+}
+
+.historia h2 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.historia p {
+  font-family: "Roboto", Helvetica, sans-serif;
+}

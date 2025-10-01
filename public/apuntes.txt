@@ -1,0 +1,99 @@
+Vamos a hacer la paleta de colores pero bien joder
+
+Colores de la paleta
+
+#042940
+#005C53
+#9FC131
+#DBF227
+#D6D58E
+
+#042940 → azul muy oscuro
+
+#005C53 → verde azulado oscuro
+
+#9FC131 → verde lima apagado
+
+#DBF227 → amarillo brillante
+
+#D6D58E → beige suave
+
+
+
+Fondo principal (body / main background)
+
+Usa #DBF227 (amarillo brillante) con texto negro para contraste.
+
+O bien, si prefieres un look más sobrio: #D6D58E (beige claro).
+
+Header / Navbar / Footer
+
+Fondo con #042940 (azul oscuro) o #005C53 (verde azulado oscuro).
+
+Texto blanco para contraste.
+
+Botones principales (CTA - Call To Action)
+
+Fondo #9FC131 (verde lima apagado).
+
+Texto negro o blanco según se vea más legible.
+
+Hover → #DBF227 (amarillo brillante).
+
+Botones secundarios / Links
+
+Fondo #042940 con texto blanco.
+
+Hover → #005C53 (verde azulado).
+
+Fondos de boxes / tarjetas / secciones destacadas
+
+Fondo #D6D58E (beige claro).
+
+Bordes o títulos con #9FC131 o #005C53 para dar jerarquía.
+
+Submenús, dropdowns o modales
+
+Fondo #005C53 con texto blanco.
+
+Hover en items → #9FC131.
+
+Detalles, iconos o acentos
+
+Usa #DBF227 para resaltar (ej: iconos, highlights, badges, botones de alerta).
+
+
+Fondo oscuro (#042940, #005C53) → texto blanco.
+
+Fondo claro (#9FC131, #DBF227, #D6D58E) → texto negro.
+
+
+TIPOGRAFIAS
+
+Titulos y subtitulos:
+font-family: "Poppins", Arial, sans-serif;
+
+Texto normal y botones
+font-family: "Roboto", Helvetica, sans-serif;
+ -- comprueba el font-weight : font-weight: 400; /* normal */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
