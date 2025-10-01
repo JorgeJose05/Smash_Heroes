@@ -1,7 +1,241 @@
+:root {
+  --amarillo: #d6d58e;
+  --azul: #042940;
+  --verdeAction: #9fc131;
+  --hoververdeAction: #dbf227;
+  --boxesback: #005c53;
+  --detalles: #dbf227;
+}
+
+/* seguridad: box-sizing para evitar sorpresas */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* contenedor general */
 .miembros-container {
   padding: 2rem;
-  background: #f5f5f5;
+  background: #fff;
   border-radius: 12px;
   margin: 2rem auto;
   max-width: 1400px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* header: input + botón */
+.miembros-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.miembros-header input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--boxesback);
+  border-radius: 8px;
+}
+.miembros-header button {
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--verdeAction);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* grid de tarjetas */
+.miembros-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* tarjeta individual */
+.member-card {
+  background: var(--boxesback);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* evita que algo se salga del borde */
+  min-height: 220px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* zona superior: avatar + nombre */
+.member-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.member-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover; /* IMPORTANT: recorta sin deformar */
+  border: 3px solid var(--detalles);
+  display: block;
+  background: #ccc; /* mientras carga la img */
+}
+
+/* nombre */
+.member-name {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1.05rem;
+  text-align: center;
+  word-break: break-word;
+}
+
+/* stats (siguiendo / seguidores) */
+.member-stats {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.8rem;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stat-number {
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.05rem;
+}
+.stat-label {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* acciones: seguir y más */
+.member-actions {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: auto; /* empuja acciones abajo */
+  justify-content: center;
+}
+/* botones de acción - follow / unfollow */
+.btn-follow,
+.btn-unfollow {
+  min-width: 0; /* evita que empujen el contenedor en flex */
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", Arial, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+}
+
+/* BOTÓN SEGUIDO (activo) - relleno verde */
+.btn-follow {
+  background: var(--verdeAction);
+  color: #042940; /* color oscuro para buen contraste sobre verde claro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.btn-follow:hover,
+.btn-follow:focus {
+  background: var(--hoververdeAction);
+  color: var(--azul);
+  transform: translateY(-2px);
+  outline: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+/* BOTÓN DEJAR DE SEGUIR - ghost/outline (mejor en fondo oscuro) */
+
+:root {
+  /* valores por defecto pensados para contexto CLARO */
+  --btn-unfollow-bg: transparent;
+  --btn-unfollow-color: var(--azul);
+  --btn-unfollow-border: 1.5px solid var(--boxesback);
+  --btn-unfollow-hover-bg: rgba(9, 84, 74, 0.06);
+  --btn-unfollow-hover-color: var(--hoververdeAction);
+}
+
+.btn-unfollow {
+  background: var(--btn-unfollow-bg);
+  color: var(--btn-unfollow-color);
+  border: var(--btn-unfollow-border);
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", Arial, sans-serif;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-unfollow:hover,
+.btn-unfollow:focus {
+  background: var(--btn-unfollow-hover-bg);
+  color: var(--btn-unfollow-hover-color);
+  transform: translateY(-2px);
+  outline: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Variante compacta */
+.btn-follow.small,
+.btn-unfollow.small {
+  padding: 0.35rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+/* accesibilidad: foco visible */
+.btn-follow:focus-visible,
+.btn-unfollow:focus-visible {
+  box-shadow: 0 0 0 4px rgba(159, 193, 49, 0.14);
+}
+
+/* Si usas icono dentro del botón */
+.btn-follow img,
+.btn-unfollow img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+  filter: none; /* si tu SVG es oscuro y quieres invertirlo usa filter: invert(1) */
+}
+
+/* responsive: en pantallas pequeñas apilar algo si quieres */
+@media (max-width: 520px) {
+  .member-avatar {
+    width: 72px;
+    height: 72px;
+  }
+  .member-card {
+    min-height: 180px;
+    padding: 0.9rem;
+  }
+  .miembros-container ul {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
 }

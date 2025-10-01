@@ -1,10 +1,29 @@
+:root {
+  --amarillo: #d6d58e; /*o usa este dbf227*/
+  --azul: #042940;
+  --verdeAction: #9fc131;
+  --hoververdeAction: #dbf227;
+  --boxesback: #005c53;
+  --detalles: #dbf227;
+}
+
 .contactanos-container {
   gap: 2rem;
   padding: 2rem;
-  background: #f5f5f5;
+  background: #fff; /*Esto ya lo voy a dejar en blanco porque no queda bien con los colores de las boxes generales y lo mismo ira para foro, miembros...*/
   border-radius: 12px;
   margin: 2rem auto;
   max-width: 1400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contactanos-container h1 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--azul);
+  margin-bottom: 1rem;
 }
 
 #form-container {
@@ -15,20 +34,52 @@
 
 #form-container > * {
   flex: 0 0 auto;
+  font-family: "Roboto", Helvetica, sans-serif;
+  border: 2px solid var(--boxesback);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#form-container input:focus,
+#form-container textarea:focus {
+  outline: none;
+  border-color: var(--verdeAction);
+  box-shadow: 0 0 6px rgba(159, 193, 49, 0.5);
 }
 
 #mensaje {
   height: 120px;
   max-height: 250px;
-  max-width: 823px;
+  resize: vertical;
+}
+
+#form-container button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--verdeAction);
+  color: #fff;
+  font-weight: 600;
+  font-family: "Poppins", Arial, sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#form-container button:hover {
+  background: var(--hoververdeAction);
+  color: var(--azul);
 }
 
 .pre-form-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
 }
 
 .pre-form-container img {
   height: auto;
   width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
